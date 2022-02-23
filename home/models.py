@@ -30,6 +30,7 @@ class PageButtonBlock(blocks.StructBlock):
 class Article(Page):
     body = StreamField([
         ('page_button', PageButtonBlock()),
+        ('page', PageChooserBlock()),
     ], null=True, blank=True)
 
     content_panels = Page.content_panels + [
